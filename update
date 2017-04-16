@@ -1,0 +1,3 @@
+#!/bin/bash
+rm -rf simc
+git clone https://github.com/simulationcraft/simc
