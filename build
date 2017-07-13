@@ -1,10 +1,12 @@
-#!/bin/bash
-cd simc/
+#! /bin/sh
+
+cd simc
+./configure 
+
+cd engine
 make clean
-cd engine/
-make clean
-sync && sleep 2
-make -j4 OPENSSL=1 optimized
+make -j6
+
 cd ..
-qmake-qt5 simcqt.pro
-make -j4
+make clean
+make -j6
